@@ -1,8 +1,10 @@
 import _ from "lodash";
 import "./style.css";
-import Archer from "./archer_background.jpg";
+import Archer from "./img/archer_background.jpg";
+import helloWorld from "./anotherFile";
 
 const component = () => {
+    console.log(helloWorld)
     const element = document.createElement("div");  
     element.innerHTML = _.join(["Hello", "webpack"], " ");
     element.classList.add("hello");
