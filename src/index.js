@@ -1,23 +1,18 @@
 import _ from "lodash";
-import "./style.css";
-import Archer from "./img/archer_background.jpg";
-import helloWorld from "./anotherFile";
+import printMe from "./print";
 
 const component = () => {
-    console.log(helloWorld)
     const element = document.createElement("div");  
-    element.innerHTML = _.join(["Hello", "webpack"], " ");
-    element.classList.add("hello");
-
-    // line break
-    element.appendChild(document.createElement("br"));
+    const btn = document.createElement("button");
     
-    // add image
-    const archer = new Image();
-    archer.src = Archer;
-    archer.classList.add("image");
-    element.appendChild(archer);
-  
+    element.innerHTML = _.join(["Hello", "webpack"], " ");
+    element.appendChild(document.createElement("br"));
+
+    btn.innerHTML = "Click me and check the console";
+    btn.onclick = printMe;
+
+    element.appendChild(btn);
+
     return element;
 }
   
